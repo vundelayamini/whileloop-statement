@@ -1,8 +1,9 @@
 #!/bin/bash -x
+num=2
 
-count=2
-while [[ count -eq  2  &&  count -le 200 ]]
+while [ $num -eq 2 ]
 do
-      echo $(( 2 ** count))
-      (( count++ ))
+      result=$(( 2 ** $num))
+        echo $result
+      (( num++ ))
 done

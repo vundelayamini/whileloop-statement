@@ -1,19 +1,24 @@
 #!/bin/bash -x
 
-flipcoins=10
-while [ $Heads -ne 11 || $Tails -ne 11 ]
+Head=1
+Tail=1
+
+while [[ $Head -le 11 ]] && [[ $Tail -le 11 ]]
 do
-         if [ $coin -eq 0 ]
-          then
-             ((Heads ++ ))
-          else
-           ((Tails++))
-        fi
+		value=$((RANDOM%2))
+
+		if [ $value -eq 0 ]
+		then
+				((Head++))
+		else
+				((Tail++))
+		fi
 done
 
- if [$Heads -ne 11 ]
-       then
-           echo "Heads 11 times "
+
+if [ $Head -eq 12 ]
+then
+     echo Head Wins 11 Times
 else
-        echo "Tails 11 times"
+     echo Tails Wins 11 Times
 fi
