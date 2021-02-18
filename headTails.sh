@@ -1,6 +1,6 @@
-#!/bin/bash -x
+#!/bin/bash
 
-Head=1
+Head=0
 Tail=1
 
 while [[ $Head -le 11 ]] && [[ $Tail -le 11 ]]
@@ -9,9 +9,9 @@ do
 
 		if [ $value -eq 0 ]
 		then
-				((Head++))
+			((Head++))
 		else
-				((Tail++))
+			((Tail++))
 		fi
 done
 

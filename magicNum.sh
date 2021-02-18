@@ -1,7 +1,7 @@
 #!/bin/bash -x
 
-echo "Enter the magic number between 1-100 "num
-num=1-100
+echo "Enter the magic number:  "num
+read num
 
 for ((counter=1; counter=n/2; counter++ ))
 do
